@@ -1,6 +1,6 @@
 /* eslint-disable prettier/prettier */
 /* eslint-disable @typescript-eslint/no-unused-vars */
-import { Controller, Get } from "@nestjs/common";
+import { Controller, Get, Post, Put } from "@nestjs/common";
 
 @Controller('students')
 export class StudentController {
@@ -13,5 +13,15 @@ export class StudentController {
     @Get('/:studentId')
     getStudentById(){
         return 'Get Student by ID';
+    }
+
+    @Post()
+    createStudent(){
+        return 'CReate  Student';
+    }
+
+    @Put('/:studentId')
+    updateStudent(){
+        return 'Update Student by ID';
     }
 }
